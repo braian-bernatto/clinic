@@ -11,17 +11,26 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: header;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .logo_img {
   height: 9.375rem;
+  max-width: 28.125rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -34,6 +43,7 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
   background-color: #ffffff;
+  font-size: 16px;
 }
 
 .navegacion {
@@ -41,6 +51,12 @@ body {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: nav;
+  padding: 5px;
+  border-radius: 7px;
+  text-align: center;
+}
+
+.navegacion .main_menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,27 +64,35 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  width: 100%;
   list-style-type: none;
-}
-
-.navegacion .main_menu {
   padding: 5px;
-  border: 1px solid #535555;
   border-radius: 7px;
   text-align: center;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.navegacion .main_menu li {
+  background: #003459;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+  margin: 2px 2px;
+  padding: 5px;
+  border-radius: 7px;
+  text-align: center;
+  padding: 10px;
+  font-size: 1.125em;
 }
 
 .contenedor {
+  color: #fff;
   width: 90%;
   max-width: 1000px;
-  margin: 20px auto;
+  margin: 0 auto;
   display: -ms-grid;
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 5px;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: (auto)[5];
@@ -83,9 +107,28 @@ body {
   -ms-grid-column-span: 2;
   grid-area: main;
   padding: 5px;
-  border: 1px solid #535555;
   border-radius: 7px;
   text-align: center;
+  background: #003459;
+  height: 40.5em;
+  font-size: 0.9375em;
+}
+
+.sidebar {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: sidebar;
+  display: -ms-grid;
+  display: grid;
+  padding: 5px;
+  border-radius: 7px;
+  text-align: center;
+  background: #003459;
+  min-height: 12.5em;
+  font-size: 1.125em;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .footer {
@@ -94,19 +137,23 @@ body {
   -ms-grid-column-span: 3;
   grid-area: footer;
   padding: 5px;
-  border: 1px solid #535555;
   border-radius: 7px;
   text-align: center;
+  background: #003459;
+  font-size: 15px;
+  max-height: 50px;
 }
 
-.sidebar {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 3;
-  grid-area: sidebar;
-  padding: 5px;
-  border: 1px solid #535555;
-  border-radius: 7px;
-  text-align: center;
+@media screen and (max-width: 768px) {
+  .contenedor {
+        grid-template-areas: 'header header header' 'nav nav nav' 'main main main' 'main main main' 'sidebar sidebar sidebar' 'footer footer footer';
+  }
+  body {
+    font-size: 10px;
+  }
+  .logo_img {
+    width: 380px;
+    margin-left: -15px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
