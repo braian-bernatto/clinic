@@ -1,15 +1,14 @@
- /* Hide scrollbar for Chrome, Safari and Opera
-body::-webkit-scrollbar
-    display: none
+//  Hide scrollbar for Chrome, Safari and Opera
+// body::-webkit-scrollbar
+//     display: none
 
 body
-    /* Hide scrollbar for IE, Edge and Firefox
-    -ms-overflow-style: none
-    scrollbar-width: none
-    background-color: #ffffff
-    // height: 100vh
-    font-size: 16px
-
+    // Hide scrollbar for IE, Edge and Firefox
+    // -ms-overflow-style: none
+    // scrollbar-width: none
+    min-height: 100vh
+    background: rgb(255,255,255)
+    background: linear-gradient(174deg, rgba(255,255,255,1) 0%, rgba(218,218,218,1) 100%, rgba(176,176,176,1) 100%)
 .navegacion
     grid-area: nav
     // background: $color1
@@ -29,25 +28,100 @@ body
             +bordes
             padding: 10px
             font-size: 1.125em
+            transition: all .15s
+            +shadow
+
+            &:hover
+                background: $color2
+                cursor: pointer
+            
+            &:active
+                box-shadow: inset 0 12px 35px rgba(0, 0, 0, 0.5)
        
 .contenedor
     color: #fff
     width: 90%
-    max-width: 1000px
+    max-width: 1500px
     margin: 0 auto
     display: grid
     grid-gap: 5px
-    grid-template-columns: repeat(3, 1fr)
+    grid-template-columns: repeat(2, 1fr) 250px
     grid-template-rows: repeat(5, auto)
     grid-template-areas: 'header header header' 'nav nav nav' 'main main sidebar' 'main main sidebar' 'footer footer footer'
 
-.center
+.main_content
+    grid-area: main
+    min-width: 288px
+
+    &__especialidades        
+        grid-area: main
+        +bordes
+        background: $color1
+        font-size: 1.25em
+        +shadow
+        display: grid
+        grid-template-columns: 1fr
+        grid-template-rows: 60px 1fr
+
+        ul
+            display: flex
+            flex-flow: column nowrap
+            // justify-self: center  
+            margin-bottom: 10px            
+
+        li
+            list-style-type: none
+            flex: 1 1 auto
+            display: flex
+            letter-spacing: 1px    
+            border-bottom: 1px solid gray
+            align-items: center        
+            &:hover
+                background: $color2
+                cursor: pointer
+
+            span
+                margin-right: 20px   
+
+            .especialidad__cita            
+                border: 1px solid #eee
+                margin-left: auto
+                margin-right: 0
+                border-radius: 4px
+                padding: 4px 2px
+                margin-top: 5px
+                margin-bottom: 5px
+                font-size: 0.875em
+                box-shadow: inset 0 12px 35px rgba(228, 228, 228, 0.5)
+
+                &:hover                
+                    box-shadow: inset 0 12px 35px rgba(0, 0, 0, 0.5)
+            
+        .title
+            grid-column: 1 / -1        
+            align-self: start   
+            letter-spacing: 4px     
+
+.center2
     grid-area: main
     +bordes
     background: $color1
-    height: 40.5em
+    // height: 40.5em
     font-size: 0.9375em
+    +shadow
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: repeat(3, auto)
+    align-content: start
+    justify-content: center
 
+    img
+        height: 100px
+    
+    .center_title
+        grid-column: 1 / -1
+
+    display: none
 
 .sidebar
     grid-area: sidebar
@@ -57,13 +131,20 @@ body
     min-height: 12.5em
     font-size: 1.125em
     align-content: center
+    +shadow
     
 .footer
     grid-area: footer
     +bordes
     background: $color1
-    font-size: 15px
-    max-height: 50px
+    font-size: 0.8375em
+    +shadow
+    
+    h2
+        margin: 10px
+        user-select: text
+        text-decoration: none
+    
 
 @media screen and ( max-width: 768px )
     .contenedor
@@ -75,3 +156,6 @@ body
     .logo_img
         width: 380px
         margin-left: -15px
+
+    .center
+        font-size: 12px
