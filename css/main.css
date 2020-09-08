@@ -126,6 +126,7 @@ body {
   -ms-grid-column-span: 2;
   grid-area: main;
   min-width: 288px;
+  position: relative;
 }
 
 .main_content__especialidades {
@@ -217,7 +218,7 @@ body {
   letter-spacing: 4px;
 }
 
-.center2 {
+.main_content__profesionales {
   -ms-grid-row: 3;
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
@@ -232,6 +233,7 @@ body {
   box-shadow: 3px 15px 16px -6px rgba(0, 0, 0, 0.53);
   display: -ms-grid;
   display: grid;
+  grid-gap: 20px;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: (auto)[3];
@@ -241,14 +243,17 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  display: none;
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  height: 100%;
 }
 
-.center2 img {
+.main_content__profesionales img {
   height: 6.25em;
 }
 
-.center2 .center_title {
+.main_content__profesionales .center_title {
   grid-column: 1 / -1;
 }
 

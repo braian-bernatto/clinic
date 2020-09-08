@@ -13,6 +13,8 @@ function profesionales() {
     var estado =  document.getElementById("profesionales_list");
 
         estado.style.display = "grid";
-        document.getElementById("especialidades_list").style.display = "none";
+        // document.getElementById("especialidades_list").style.display = "none";
     console.log(document.getElementById("profesionales_list").style.display);
    } 
+
+   

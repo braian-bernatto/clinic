@@ -44,6 +44,7 @@ body
 .main_content
     grid-area: main
     min-width: 288px
+    position: relative
 
     &__especialidades        
         grid-area: main
@@ -99,7 +100,7 @@ body
             align-self: start   
             letter-spacing: 4px     
 
-.center2
+.main_content__profesionales
     grid-area: main
     +bordes
     background: $color1
@@ -107,10 +108,15 @@ body
     font-size: 0.9375em
     +shadow
     display: grid
+    grid-gap: 20px
     grid-template-columns: 1fr 1fr
     grid-template-rows: repeat(3, auto)
     align-content: start
     justify-content: center
+    z-index: 20
+    position: absolute
+    top: 0
+    height: 100%
 
     img
         height: 6.25em
@@ -118,7 +124,6 @@ body
     .center_title
         grid-column: 1 / -1
 
-    display: none
 
 .sidebar
     grid-area: sidebar
