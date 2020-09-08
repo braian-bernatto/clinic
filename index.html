@@ -30,13 +30,14 @@
       <nav class="navegacion">
         <ul class="main_menu animate__animated animate__slideInLeft">
           <li class="inicio" id="inicio">Inicio</li>
-          <li class="btn_especialidades" id="btn_especialidades" onclick="especialidades()">Especialidades</li>
-          <li class="horarios" id="horarios">Horarios</li>
+          <li class="btn_especialidades" onclick="especialidades()">Especialidades</li>
+          <li class="horarios" id="estudios"  onclick="estudios()">Estudios - Diagnósticos</li>
           <li class="contactos" id="contactos">Contactos</li>
           <li class="nosotros" id="nosotros"  onclick="profesionales()">Sobre Nosotros</li>
         </ul>
       </nav>      
       <div class="main_content animate__animated animate__slideInLeft">
+        <!-- ESPECIALIDADES -->
       <div class="main_content__especialidades " id="especialidades_list">
         <h2 class="title">Especialidades</h2>
         <ul class="especialidad">
@@ -60,12 +61,40 @@
         <li class="especialidad__18"> <span class=" icon-ok"></span> Urología<button class="especialidad__cita">Agendar cita</button></li>
       </ul>
       </div>
+         <!-- ESTUDIOS Y DIAGNÓSTICOS -->
+         <div class="main_content__estudios " id="estudios_list">
+          <h2 class="title">Estudios - Diagnósticos</h2>
+          <ul class="estudios">
+          <li class="estudios__1"> <span class=" icon-ok"></span>Ecografía Ginecológica<button class="estudios__cita">Agendar cita</button></li>
+          <li class="estudios__2"> <span class=" icon-ok"></span>Ecografía Obstétrica<button class="estudios__cita">Agendar cita</button></li>
+          <li class="estudios__3"> <span class=" icon-ok"></span>Ecografía Transvaginal<button class="estudios__cita">Agendar cita</button></li>
+          <li class="estudios__4"> <span class=" icon-ok"></span>Ecografía Morfológica<button class="estudios__cita">Agendar cita</button></li>
+          <li class="estudios__5"> <span class=" icon-ok"></span>Eco Doppler<button class="estudios__cita">Agendar cita</button></li>
+          <li class="estudios__6"> <span class=" icon-ok"></span>Ecografía Doppler Materno Fetal<button class="estudios__cita">Agendar cita</button></li>
+          <li class="estudios__7"> <span class=" icon-ok"></span>Eco Doppler Ginecológico<button class="estudios__cita">Agendar cita</button></li>
+          <li class="estudios__8"> <span class=" icon-ok"></span>Ecografía Mamaria<button class="estudios__cita">Agendar cita</button></li>
+          <li class="estudios__9"> <span class=" icon-ok"></span>Ecografía de Partes Blandas<button class="estudios__cita">Agendar cita</button></li>
+          <li class="estudios__10"> <span class=" icon-ok"></span>Ecografía Tiroidea<button class="estudios__cita">Agendar cita</button></li>
+          <li class="estudios__11"> <span class=" icon-ok"></span>Ecografía Renal<button class="estudios__cita">Agendar cita</button></li>
+          <li class="estudios__12"> <span class=" icon-ok"></span>Ecografía Abdominal Alta y Baja<button class="estudios__cita">Agendar cita</button></li>
+          <li class="estudios__13"> <span class=" icon-ok"></span>Ecografía Vesico Prostática<button class="estudios__cita">Agendar cita</button></li>
+          <li class="estudios__14"> <span class=" icon-ok"></span>Ecografía Prostática<button class="estudios__cita">Agendar cita</button></li>
+          <li class="estudios__15"> <span class=" icon-ok"></span>Ecografía Testicular<button class="estudios__cita">Agendar cita</button></li>
+          <li class="estudios__16"> <span class=" icon-ok"></span>Estudio de Cuello Uterino<button class="estudios__cita">Agendar cita</button></li>
+          <li class="estudios__17"> <span class=" icon-ok"></span>(PAP + COLPOSCOPÍA)<button class="estudios__cita">Agendar cita</button></li>
+          <li class="estudios__18"> <span class=" icon-ok"></span>Electrocardiograma (E.C.G.)<button class="estudios__cita">Agendar cita</button></li>
+          <li class="estudios__19"> <span class=" icon-ok"></span>Espirometría<button class="estudios__cita">Agendar cita</button></li>
+          <li class="estudios__20"> <span class=" icon-ok"></span>Marcadores Cromosómicos<button class="estudios__cita">Agendar cita</button></li>
+          <li class="estudios__21"> <span class=" icon-ok"></span>Monitoreo Fetal<button class="estudios__cita">Agendar cita</button></li>
+          <li class="estudios__22"> <span class=" icon-ok"></span>Perfil Biofísico<button class="estudios__cita">Agendar cita</button></li>
+        </ul>
+        </div>
       <!-- Listado de profesionales -->
       <div class="main_content__profesionales " id="profesionales_list">
-        <h2 class="center_title">Conozca a nuestro plantel de profesionales</h2>
+        <h2 class="title">Conozca a nuestro plantel de profesionales</h2>
         <div class="profesional_1">
           <img src="img/female_doctor.svg" alt="" />
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla</p>
+          <p>Dra. María Elena Gómez Fonseca <br> </p>
         </div>
         <div class="profesional_2">
           <img src="img/male_doctor.svg" alt="" />

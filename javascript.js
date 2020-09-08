@@ -1,20 +1,23 @@
 function especialidades() {
     console.log('se presiono especialidades');
-    console.log(document.getElementById("especialidades_list").style.display);
-    var estado =  document.getElementById("especialidades_list");
-
-        estado.style.display = "grid";
-        document.getElementById("profesionales_list").style.display = "none";
-        console.log(document.getElementById("especialidades_list").style.display);
-} 
+    var estado = document.getElementById("especialidades_list");
+    estado.style.display = "grid";
+    document.getElementById("profesionales_list").style.display = "none";
+    document.getElementById("estudios_list").style.display = "none";
+}
+function estudios() {
+    console.log('se presiono estudios');
+    var estado = document.getElementById("estudios_list");
+    estado.style.display = "grid";
+    document.getElementById("especialidades_list").style.display = "none";
+    document.getElementById("profesionales_list").style.display = "none";
+}
 function profesionales() {
     console.log('se presiono profesionales');
-    console.log(document.getElementById("profesionales_list").style.display);
-    var estado =  document.getElementById("profesionales_list");
+    var estado = document.getElementById("profesionales_list");
+    estado.style.display = "grid";
+    document.getElementById("especialidades_list").style.display = "none";
+    document.getElementById("estudios_list").style.display = "none";
+}
 
-        estado.style.display = "grid";
-        // document.getElementById("especialidades_list").style.display = "none";
-    console.log(document.getElementById("profesionales_list").style.display);
-   } 
 
-   

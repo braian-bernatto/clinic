@@ -46,7 +46,7 @@ body
     min-width: 288px
     position: relative
 
-    &__especialidades        
+    &__especialidades, &__estudios      
         grid-area: main
         +bordes
         background: $color1
@@ -60,7 +60,8 @@ body
             display: flex
             flex-flow: column nowrap
             // justify-self: center  
-            margin-bottom: 10px            
+            margin-bottom: 10px  
+             
 
         li
             list-style-type: none
@@ -68,7 +69,8 @@ body
             display: flex
             letter-spacing: 1px    
             border-bottom: 1px solid gray
-            align-items: center        
+            align-items: center 
+            text-align: left
             &:hover
                 background: $color2
                 cursor: pointer
@@ -76,7 +78,7 @@ body
             span
                 margin-right: 20px   
 
-            .especialidad__cita            
+            .especialidad__cita, .estudios__cita            
                 border: 1px solid #eee
                 margin-left: auto
                 margin-right: 0
@@ -88,6 +90,8 @@ body
                 box-shadow: inset 0 12px 35px rgba(228, 228, 228, 0.5)
 
             button
+                display: flex
+                flex: 0 0 auto
                 cursor: pointer
                 border: 1px solid #eee
                 background: none
@@ -95,34 +99,41 @@ body
                 &:active
                     box-shadow: inset 0 12px 35px rgba(0, 0, 0, 0.5)
             
-        .title
-            grid-column: 1 / -1        
-            align-self: start   
-            letter-spacing: 4px     
+    .title
+        grid-column: 1 / -1        
+        align-self: start   
+        letter-spacing: 2px
 
-.main_content__profesionales
-    grid-area: main
-    +bordes
-    background: $color1
-    // height: 40.5em
-    font-size: 0.9375em
-    +shadow
-    display: grid
-    grid-gap: 20px
-    grid-template-columns: 1fr 1fr
-    grid-template-rows: repeat(3, auto)
-    align-content: start
-    justify-content: center
-    z-index: 20
-    position: absolute
-    top: 0
-    height: 100%
 
-    img
-        height: 6.25em
-    
-    .center_title
-        grid-column: 1 / -1
+    &__estudios
+        // position: absolute
+        // top: 0
+        // height: 100%
+        // width: 100%
+        // border: 2px solid red
+        display: none
+
+    &__profesionales
+        grid-area: main
+        +bordes
+        background: $color1
+        // height: 40.5em
+        font-size: 0.9375em
+        +shadow
+        display: grid
+        grid-gap: 20px
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: repeat(3, auto)
+        align-content: start
+        justify-content: center
+        // position: absolute
+        // top: 0
+        // height: 100%
+        display: none
+
+        img
+            height: 6.25em
+        
 
 
 .sidebar
@@ -155,5 +166,4 @@ body
     body
         font-size: 10px
 
-    .center
-        font-size: 12px
+
