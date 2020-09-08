@@ -34,8 +34,8 @@ header {
 }
 
 .logo_img {
-  height: 9.375rem;
-  max-width: 28.125rem;
+  max-width: 28.125em;
+  height: auto;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -90,8 +90,8 @@ body {
   font-size: 1.125em;
   -webkit-transition: all .15s;
   transition: all .15s;
-  -webkit-box-shadow: 10px 10px 17px -6px rgba(0, 0, 0, 0.61);
-  box-shadow: 10px 10px 17px -6px rgba(0, 0, 0, 0.61);
+  -webkit-box-shadow: 3px 15px 16px -6px rgba(0, 0, 0, 0.53);
+  box-shadow: 3px 15px 16px -6px rgba(0, 0, 0, 0.53);
 }
 
 .navegacion .main_menu li:hover {
@@ -106,7 +106,7 @@ body {
 
 .contenedor {
   color: #fff;
-  width: 90%;
+  width: 80%;
   max-width: 1500px;
   margin: 0 auto;
   display: -ms-grid;
@@ -139,8 +139,8 @@ body {
   text-align: center;
   background: #003459;
   font-size: 1.25em;
-  -webkit-box-shadow: 10px 10px 17px -6px rgba(0, 0, 0, 0.61);
-  box-shadow: 10px 10px 17px -6px rgba(0, 0, 0, 0.61);
+  -webkit-box-shadow: 3px 15px 16px -6px rgba(0, 0, 0, 0.53);
+  box-shadow: 3px 15px 16px -6px rgba(0, 0, 0, 0.53);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -201,6 +201,7 @@ body {
   cursor: pointer;
   border: 1px solid #eee;
   background: none;
+  color: #eee;
 }
 
 .main_content__especialidades li button:active {
@@ -227,8 +228,8 @@ body {
   text-align: center;
   background: #003459;
   font-size: 0.9375em;
-  -webkit-box-shadow: 10px 10px 17px -6px rgba(0, 0, 0, 0.61);
-  box-shadow: 10px 10px 17px -6px rgba(0, 0, 0, 0.61);
+  -webkit-box-shadow: 3px 15px 16px -6px rgba(0, 0, 0, 0.53);
+  box-shadow: 3px 15px 16px -6px rgba(0, 0, 0, 0.53);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -244,7 +245,7 @@ body {
 }
 
 .center2 img {
-  height: 100px;
+  height: 6.25em;
 }
 
 .center2 .center_title {
@@ -266,8 +267,8 @@ body {
   font-size: 1.125em;
   -ms-flex-line-pack: center;
       align-content: center;
-  -webkit-box-shadow: 10px 10px 17px -6px rgba(0, 0, 0, 0.61);
-  box-shadow: 10px 10px 17px -6px rgba(0, 0, 0, 0.61);
+  -webkit-box-shadow: 3px 15px 16px -6px rgba(0, 0, 0, 0.53);
+  box-shadow: 3px 15px 16px -6px rgba(0, 0, 0, 0.53);
 }
 
 .footer {
@@ -280,8 +281,8 @@ body {
   text-align: center;
   background: #003459;
   font-size: 0.8375em;
-  -webkit-box-shadow: 10px 10px 17px -6px rgba(0, 0, 0, 0.61);
-  box-shadow: 10px 10px 17px -6px rgba(0, 0, 0, 0.61);
+  -webkit-box-shadow: 3px 15px 16px -6px rgba(0, 0, 0, 0.53);
+  box-shadow: 3px 15px 16px -6px rgba(0, 0, 0, 0.53);
 }
 
 .footer h2 {
@@ -299,10 +300,6 @@ body {
   }
   body {
     font-size: 10px;
-  }
-  .logo_img {
-    width: 380px;
-    margin-left: -15px;
   }
   .center {
     font-size: 12px;

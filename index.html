@@ -29,15 +29,15 @@
       </header>
       <nav class="navegacion">
         <ul class="main_menu animate__animated animate__slideInLeft">
-          <li class="inicio">Inicio</li>
-          <li class="btn_especial">Especialidades</li>
-          <li class="horarios">Horarios</li>
-          <li class="contactos">Contactos</li>
-          <li class="nosotros">Sobre Nosotros</li>
+          <li class="inicio" id="inicio">Inicio</li>
+          <li class="btn_especialidades" id="btn_especialidades" onclick="especialidades()">Especialidades</li>
+          <li class="horarios" id="horarios">Horarios</li>
+          <li class="contactos" id="contactos">Contactos</li>
+          <li class="nosotros" id="nosotros"  onclick="profesionales()">Sobre Nosotros</li>
         </ul>
       </nav>      
       <div class="main_content">
-      <div class="main_content__especialidades animate__animated animate__slideInLeft">
+      <div class="main_content__especialidades animate__animated animate__slideInLeft" id="especialidades_list">
         <h2 class="title">Especialidades</h2>
         <ul class="especialidad">
         <li class="especialidad__1"> <span class=" icon-ok"></span> Alergia<button class="especialidad__cita">Agendar cita</button></li>
@@ -61,8 +61,8 @@
       </ul>
       </div>
       <!-- Listado de profesionales -->
-      <div class="center2 animate__animated animate__slideInLeft">
-        <h2 class="title">Conozca a nuestro plantel de profesionales</h2>
+      <div class="center2 animate__animated animate__slideInLeft" id="profesionales_list">
+        <h2 class="center_title">Conozca a nuestro plantel de profesionales</h2>
         <div class="profesional_1">
           <img src="img/female_doctor.svg" alt="" />
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla</p>
@@ -99,5 +99,6 @@
         <h2 class="icon-location">INCAS 3467, Asunción</h2>
       </footer>
     </div>
+    <script src="javascript.js"></script>       
   </body>
 </html>
