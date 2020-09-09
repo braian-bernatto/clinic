@@ -49,6 +49,7 @@ body {
   min-height: 100vh;
   background: white;
   background: linear-gradient(174deg, white 0%, #dadada 100%, #b0b0b0 100%);
+  font-size: 13px;
 }
 
 .navegacion {
