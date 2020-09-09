@@ -83,6 +83,66 @@
       "css": "user-times",
       "code": 62005,
       "src": "fontawesome"
+    },
+    {
+      "uid": "767fede84586366cd7d6c835be745454",
+      "css": "mobile-1",
+      "code": 59397,
+      "src": "entypo"
+    },
+    {
+      "uid": "37b41cdae5ec9dab40e0c5bfff8a0ec8",
+      "css": "id-card",
+      "code": 62146,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "20fc52f9a88bb7bda023ef209acac095",
+      "css": "graduation-cap",
+      "code": 61853,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "46120eb259799eab0dac0691137e5706",
+      "css": "medkit",
+      "code": 61690,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "9e8430ce95f56720ae8e7afba291df88",
+      "css": "user-md",
+      "code": 61680,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "a41cabcd11152063a37f2407048c5494",
+      "css": "wpforms",
+      "code": 62104,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "b429436ec5a518c78479d44ef18dbd60",
+      "css": "paste",
+      "code": 61674,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "d7059fc5329e1a7fcab80ba87831c957",
+      "css": "book-alt",
+      "code": 59398,
+      "src": "iconic"
+    },
+    {
+      "uid": "599d6c088f4a1c64611b989459d65f6b",
+      "css": "lightbulb",
+      "code": 59399,
+      "src": "elusive"
+    },
+    {
+      "uid": "9d3e9faf68fd4e12def853f0d4e1173b",
+      "css": "whatsapp",
+      "code": 62002,
+      "src": "fontawesome"
     }
   ]
 }
