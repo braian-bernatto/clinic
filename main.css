@@ -35,6 +35,7 @@ body {
   min-height: 100vh;
   background: white;
   background: linear-gradient(174deg, white 0%, #dadada 100%, #b0b0b0 100%);
+  font-size: 13px;
 }
 
 .navegacion {
@@ -117,6 +118,8 @@ body {
   display: flex;
   flex-flow: column nowrap;
   margin-bottom: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 .main_content__especialidades li, .main_content__estudios li {
   list-style-type: none;
@@ -132,7 +135,7 @@ body {
   cursor: pointer;
 }
 .main_content__especialidades li span, .main_content__estudios li span {
-  margin-right: 20px;
+  margin-right: 1.25em;
 }
 .main_content__especialidades li .especialidad__cita, .main_content__especialidades li .estudios__cita, .main_content__estudios li .especialidad__cita, .main_content__estudios li .estudios__cita {
   border: 1px solid #eee;
@@ -142,7 +145,7 @@ body {
   padding: 4px 3px;
   margin-top: 5px;
   margin-bottom: 5px;
-  font-size: 0.875em;
+  font-size: 20px;
   box-shadow: inset 0 12px 35px rgba(228, 228, 228, 0.5);
 }
 .main_content__especialidades li button, .main_content__estudios li button {
@@ -195,6 +198,7 @@ body {
   grid-template-rows: 1fr 80px;
   justify-items: center;
   align-content: center;
+  margin-bottom: 20px;
 }
 .main_content__profesionales .profesional_1 .profesional_description, .main_content__profesionales .profesional_2 .profesional_description, .main_content__profesionales .profesional_3 .profesional_description, .main_content__profesionales .profesional_4 .profesional_description, .main_content__profesionales .profesional_5 .profesional_description, .main_content__profesionales .profesional_6 .profesional_description {
   display: grid;
@@ -251,7 +255,14 @@ body {
     font-size: 10px;
   }
 
-  .main_content__profesionales {
+  .main_content ul {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .main_content ul span {
+    margin-right: 8px;
+  }
+  .main_content .main_content__profesionales {
     grid-template-columns: 1fr;
   }
   header {

@@ -89,7 +89,7 @@ body
                 padding: 4px 3px
                 margin-top: 5px
                 margin-bottom: 5px
-                font-size: 0.875em
+                font-size: 0.875rem
                 box-shadow: inset 0 12px 35px rgba(228, 228, 228, 0.5)
 
             button
@@ -106,6 +106,7 @@ body
         grid-column: 1 / -1        
         align-self: start   
         letter-spacing: 2px
+        font-size: 1.5625em
 
 
     &__estudios
@@ -116,7 +117,7 @@ body
         +bordes
         background: $color1
         // height: 40.5em
-        font-size: 0.9375em
+        font-size: 0.9rem
         +shadow
         display: grid
         grid-gap: 20px
@@ -134,19 +135,21 @@ body
         .profesional_1, .profesional_2, .profesional_3, .profesional_4, .profesional_5,.profesional_6
             display: grid
             grid-template-columns: 1fr
-            grid-template-rows: 1fr 80px
+            grid-template-rows: 1fr 70px
             justify-items: center
             align-content: center
-            margin-bottom: 20px
+            margin-bottom: 1.25em
             
             .profesional_description
                 display: grid
                 grid-template-columns: 1fr
                 grid-template-rows: repeat(4, auto)
                 justify-items: left
+                margin-top: 8px
+                margin-left: 0.9375em
 
                 span
-                    text-indent: -1.25em
+                    text-indent: -0.9375em
 
 .sidebar
     grid-area: sidebar
@@ -189,6 +192,13 @@ body
 
         .main_content__profesionales
             grid-template-columns: 1fr
-    
+            
+            h2 
+                font-size: 17px
+            
+
+// .main_content
+//     &__especialidades, &__profesionales, &__estudios
+//         display: none
     
         
