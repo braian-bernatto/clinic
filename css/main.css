@@ -229,6 +229,11 @@ body {
       align-self: start;
   letter-spacing: 2px;
   font-size: 1.5625em;
+  background: #003459;
+  -webkit-box-shadow: inset 0 60px rgba(255, 255, 255, 0.2), inset 0 -15px 30px rgba(0, 0, 0, 0.4), 0 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 60px rgba(255, 255, 255, 0.2), inset 0 -15px 30px rgba(0, 0, 0, 0.4), 0 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  padding: 5px;
 }
 
 .main_content__estudios {
@@ -274,12 +279,14 @@ body {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 1fr 70px;
-      grid-template-rows: 1fr 70px;
+  -ms-grid-rows: 1fr 80px;
+      grid-template-rows: 1fr 80px;
   justify-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  margin: 0 5px;
   margin-bottom: 1.25em;
+  text-align: left;
 }
 
 .main_content__profesionales .profesional_1 .profesional_description, .main_content__profesionales .profesional_2 .profesional_description, .main_content__profesionales .profesional_3 .profesional_description, .main_content__profesionales .profesional_4 .profesional_description, .main_content__profesionales .profesional_5 .profesional_description, .main_content__profesionales .profesional_6 .profesional_description {
@@ -339,6 +346,15 @@ body {
           user-select: text;
   text-decoration: none;
   text-indent: -10px;
+}
+
+@media screen and (max-width: 1040px) {
+  .main_content .title {
+    font-size: 20px;
+  }
+  .main_content__profesionales {
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 768px) {
