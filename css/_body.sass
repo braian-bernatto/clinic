@@ -55,31 +55,31 @@ body
         +shadow
         display: grid
         grid-template-columns: 1fr
-        grid-template-rows: 3.75em 1fr
+        grid-template-rows: 25px 1fr
 
         ul
             display: flex
-            flex-flow: column nowrap
-            // justify-self: center  
-            margin-bottom: 10px 
-            margin-left: 30px 
-            margin-right: 30px 
+            flex-flow: row wrap
+            margin: 10px 20px
              
 
         li
             list-style-type: none
+            background: $color2
+            border-radius: 50px
+            +shadow_light
+            padding: 7px
+            margin: 20px 10px
             flex: 1 1 auto
             display: flex
             letter-spacing: 1px    
-            border-bottom: 1px solid gray
-            align-items: center 
-            text-align: left
+            justify-content: center
             &:hover
                 background: $color2
                 cursor: pointer
 
             span
-                margin-right: 1.25em   
+                margin-right: 0.3125em   
 
             .especialidad__cita, .estudios__cita            
                 border: 1px solid #eee
