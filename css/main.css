@@ -127,6 +127,7 @@ body {
   -ms-grid-column-span: 2;
   grid-area: main;
   min-width: 288px;
+  min-height: 60vh;
   position: relative;
 }
 
@@ -183,8 +184,11 @@ body {
 }
 
 .main_content__especialidades li:hover, .main_content__estudios li:hover {
-  background: #3dccc7;
   cursor: pointer;
+}
+
+.main_content__especialidades li:active, .main_content__estudios li:active {
+  background: #02f8f0;
 }
 
 .main_content__especialidades li span, .main_content__estudios li span {

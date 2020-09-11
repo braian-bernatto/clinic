@@ -19,5 +19,13 @@ function profesionales() {
     document.getElementById("especialidades_list").style.display = "none";
     document.getElementById("estudios_list").style.display = "none";
 }
+function turnos() {
+    console.log('se presiono turnos');
+    var estado = document.getElementById("turnos_list");
+    estado.style.display = "grid";
+    document.getElementById("especialidades_list").style.display = "none";
+    document.getElementById("estudios_list").style.display = "none";
+    document.getElementById("profesionales_list").style.display = "none";
+}
 
 

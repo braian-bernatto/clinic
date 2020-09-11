@@ -45,9 +45,11 @@ body
 .main_content
     grid-area: main
     min-width: 288px
+    min-height: 60vh
     position: relative
+    
 
-    &__especialidades, &__estudios      
+    &__especialidades, &__estudios    
         grid-area: main
         +bordes
         background: $color1
@@ -62,7 +64,6 @@ body
             flex-flow: row wrap
             margin: 10px 20px
              
-
         li
             list-style-type: none
             background: $color2
@@ -75,8 +76,10 @@ body
             letter-spacing: 1px    
             justify-content: center
             &:hover
-                background: $color2
                 cursor: pointer
+            &:active
+                // box-shadow: inset 0 0px 25px rgba(0, 0, 0, 0.5)
+                background: $color3
 
             span
                 margin-right: 0.3125em   
