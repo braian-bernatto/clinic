@@ -45,16 +45,14 @@ body
 .main_content
     grid-area: main
     min-width: 288px
-    min-height: 60vh
+    min-height: 65vh
     position: relative
-    
+    // +bordes
+    // background: $color1
 
-    &__especialidades, &__estudios    
+    &__especialidades, &__estudios      
         grid-area: main
-        +bordes
-        background: $color1
         font-size: 1.25em
-        +shadow
         display: grid
         grid-template-columns: 1fr
         grid-template-rows: 25px 1fr
@@ -62,8 +60,8 @@ body
         ul
             display: flex
             flex-flow: row wrap
-            margin: 10px 20px
-             
+            margin: 10px 0px
+            
         li
             list-style-type: none
             background: $color2
@@ -76,6 +74,7 @@ body
             letter-spacing: 1px    
             justify-content: center
             &:hover
+                background: $color2
                 cursor: pointer
             &:active
                 // box-shadow: inset 0 0px 25px rgba(0, 0, 0, 0.5)
@@ -83,27 +82,6 @@ body
 
             span
                 margin-right: 0.3125em   
-
-            .especialidad__cita, .estudios__cita            
-                border: 1px solid #eee
-                margin-left: auto
-                margin-right: 0
-                border-radius: 4px
-                padding: 4px 3px
-                margin-top: 5px
-                margin-bottom: 5px
-                font-size: 0.875rem
-                box-shadow: inset 0 12px 35px rgba(228, 228, 228, 0.5)
-
-            button
-                display: flex
-                flex: 0 0 auto
-                cursor: pointer
-                border: 1px solid #eee
-                background: none
-                color: #eee
-                &:active
-                    box-shadow: inset 0 12px 35px rgba(0, 0, 0, 0.5)
             
     .title
         grid-column: 1 / -1        
@@ -114,6 +92,7 @@ body
         box-shadow: inset 0 60px rgba(255,255,255,0.2), inset 0 -15px 30px rgba(0,0,0,0.4), 0 5px 10px rgba(0,0,0,0.5)
         border-radius: 4px
         padding: 5px
+        text-align: center
 
 
     &__estudios
@@ -121,11 +100,7 @@ body
 
     &__profesionales
         grid-area: main
-        +bordes
-        background: $color1
-        // height: 40.5em
         font-size: 0.9rem
-        +shadow
         display: grid
         grid-gap: 20px
         grid-template-columns: 1fr 1fr
@@ -156,6 +131,10 @@ body
                 justify-items: left
                 margin-top: 8px
                 margin-left: 0.9375em
+                +bordes
+                // background: $color1
+                // +shadow_light_tall
+                color: $color1
 
                 span
                     text-indent: -0.9375em
@@ -169,6 +148,7 @@ body
     font-size: 1.125em
     align-content: center
     +shadow
+    +shadow_light_tall
     
 .footer
     grid-area: footer
@@ -176,7 +156,8 @@ body
     background: $color1
     font-size: 0.8375em
     +shadow
-    
+    +shadow_light_tall
+
     h2
         margin: 10px
         user-select: text

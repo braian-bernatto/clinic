@@ -127,7 +127,7 @@ body {
   -ms-grid-column-span: 2;
   grid-area: main;
   min-width: 288px;
-  min-height: 60vh;
+  min-height: 65vh;
   position: relative;
 }
 
@@ -137,13 +137,7 @@ body {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: main;
-  padding: 5px;
-  border-radius: 7px;
-  text-align: center;
-  background: #003459;
   font-size: 1.25em;
-  -webkit-box-shadow: 3px 15px 16px -6px rgba(0, 0, 0, 0.53);
-  box-shadow: 3px 15px 16px -6px rgba(0, 0, 0, 0.53);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -160,7 +154,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  margin: 10px 20px;
+  margin: 10px 0px;
 }
 
 .main_content__especialidades li, .main_content__estudios li {
@@ -184,6 +178,7 @@ body {
 }
 
 .main_content__especialidades li:hover, .main_content__estudios li:hover {
+  background: #3dccc7;
   cursor: pointer;
 }
 
@@ -193,37 +188,6 @@ body {
 
 .main_content__especialidades li span, .main_content__estudios li span {
   margin-right: 0.3125em;
-}
-
-.main_content__especialidades li .especialidad__cita, .main_content__especialidades li .estudios__cita, .main_content__estudios li .especialidad__cita, .main_content__estudios li .estudios__cita {
-  border: 1px solid #eee;
-  margin-left: auto;
-  margin-right: 0;
-  border-radius: 4px;
-  padding: 4px 3px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-size: 0.875rem;
-  -webkit-box-shadow: inset 0 12px 35px rgba(228, 228, 228, 0.5);
-          box-shadow: inset 0 12px 35px rgba(228, 228, 228, 0.5);
-}
-
-.main_content__especialidades li button, .main_content__estudios li button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-  cursor: pointer;
-  border: 1px solid #eee;
-  background: none;
-  color: #eee;
-}
-
-.main_content__especialidades li button:active, .main_content__estudios li button:active {
-  -webkit-box-shadow: inset 0 12px 35px rgba(0, 0, 0, 0.5);
-          box-shadow: inset 0 12px 35px rgba(0, 0, 0, 0.5);
 }
 
 .main_content .title {
@@ -238,6 +202,7 @@ body {
           box-shadow: inset 0 60px rgba(255, 255, 255, 0.2), inset 0 -15px 30px rgba(0, 0, 0, 0.4), 0 5px 10px rgba(0, 0, 0, 0.5);
   border-radius: 4px;
   padding: 5px;
+  text-align: center;
 }
 
 .main_content__estudios {
@@ -250,13 +215,7 @@ body {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: main;
-  padding: 5px;
-  border-radius: 7px;
-  text-align: center;
-  background: #003459;
   font-size: 0.9rem;
-  -webkit-box-shadow: 3px 15px 16px -6px rgba(0, 0, 0, 0.53);
-  box-shadow: 3px 15px 16px -6px rgba(0, 0, 0, 0.53);
   display: -ms-grid;
   display: grid;
   grid-gap: 20px;
@@ -303,6 +262,10 @@ body {
   justify-items: left;
   margin-top: 8px;
   margin-left: 0.9375em;
+  padding: 5px;
+  border-radius: 7px;
+  text-align: center;
+  color: #003459;
 }
 
 .main_content__profesionales .profesional_1 .profesional_description span, .main_content__profesionales .profesional_2 .profesional_description span, .main_content__profesionales .profesional_3 .profesional_description span, .main_content__profesionales .profesional_4 .profesional_description span, .main_content__profesionales .profesional_5 .profesional_description span, .main_content__profesionales .profesional_6 .profesional_description span {
@@ -326,6 +289,8 @@ body {
       align-content: center;
   -webkit-box-shadow: 3px 15px 16px -6px rgba(0, 0, 0, 0.53);
   box-shadow: 3px 15px 16px -6px rgba(0, 0, 0, 0.53);
+  -webkit-box-shadow: inset 0 1200px rgba(255, 255, 255, 0.2), inset 0 -15px 30px rgba(0, 0, 0, 0.4), 0 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 1200px rgba(255, 255, 255, 0.2), inset 0 -15px 30px rgba(0, 0, 0, 0.4), 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .footer {
@@ -340,6 +305,8 @@ body {
   font-size: 0.8375em;
   -webkit-box-shadow: 3px 15px 16px -6px rgba(0, 0, 0, 0.53);
   box-shadow: 3px 15px 16px -6px rgba(0, 0, 0, 0.53);
+  -webkit-box-shadow: inset 0 1200px rgba(255, 255, 255, 0.2), inset 0 -15px 30px rgba(0, 0, 0, 0.4), 0 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 1200px rgba(255, 255, 255, 0.2), inset 0 -15px 30px rgba(0, 0, 0, 0.4), 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .footer h2 {
