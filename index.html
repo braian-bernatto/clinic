@@ -16,6 +16,7 @@
     /> -->
     <title>Clínica San Nicolás</title>
   </head>
+
   <body>
     <div class="contenedor">
       <header>
@@ -29,134 +30,275 @@
       </header>
       <nav class="navegacion">
         <ul class="main_menu animate__animated animate__slideInLeft">
-          <li class="inicio" id="inicio">Inicio</li>
-          <li class="btn_especialidades" onclick="especialidades()">Especialidades</li>
-          <li class="horarios" id="estudios"  onclick="estudios()">Estudios - Diagnósticos</li>
-          <li class="turnos" id="turnos" onclick="turnos()">Turnos</li>
-          <li class="nosotros" id="nosotros"  onclick="profesionales()">Sobre Nosotros</li>
+          <li class="inicio" id="inicio_btn" onclick="inicio()">Inicio</li>
+          <li class="btn_especialidades" onclick="especialidades()">
+            Especialidades
+          </li>
+          <li class="horarios" id="estudios_btn" onclick="estudios()">
+            Estudios - Diagnósticos
+          </li>
+          <li class="turnos" id="turnos_btn" onclick="turnos()">Turnos</li>
+          <li class="nosotros" id="nosotros_btn" onclick="profesionales()">
+            Sobre Nosotros
+          </li>
         </ul>
-      </nav>      
+      </nav>
       <div class="main_content animate__animated animate__slideInLeft">
         <!-- ESPECIALIDADES -->
-      <div class="main_content__especialidades " id="especialidades_list">
-        <h2 class="title">Especialidades</h2>
-        <ul class="especialidad">
-        <li class="especialidad__1"> <span class=" icon-ok"></span> Alergia</li>
-        <li class="especialidad__2"> <span class=" icon-ok"></span> Alergia - Neumología</li>
-        <li class="especialidad__3"> <span class=" icon-ok"></span> Cardiología</li>
-        <li class="especialidad__4"> <span class=" icon-ok"></span> Clínica Médica</li>
-        <li class="especialidad__5"> <span class=" icon-ok"></span> Cirugía General</li>
-        <li class="especialidad__6"> <span class=" icon-ok"></span> Ecografía</li>
-        <li class="especialidad__7"> <span class=" icon-ok"></span> Dermatología</li>
-        <li class="especialidad__8"> <span class=" icon-ok"></span> Diabetología</li>
-        <li class="especialidad__9"> <span class=" icon-ok"></span> Ginecología</li>
-        <li class="especialidad__10"> <span class=" icon-ok"></span> Infectología</li>
-        <li class="especialidad__11"> <span class=" icon-ok"></span> Mastología</li>
-        <li class="especialidad__12"> <span class=" icon-ok"></span> Medicina Laboral</li>
-        <li class="especialidad__13"> <span class=" icon-ok"></span> Nutrición</li>
-        <li class="especialidad__14"> <span class=" icon-ok"></span> Otorrino</li>
-        <li class="especialidad__15"> <span class=" icon-ok"></span> Pediatría</li>
-        <li class="especialidad__16"> <span class=" icon-ok"></span> Psiquiatría</li>
-        <li class="especialidad__17"> <span class=" icon-ok"></span> Psicología</li>
-        <li class="especialidad__18"> <span class=" icon-ok"></span> Urología</li>
-      </ul>
-      </div>
-         <!-- ESTUDIOS Y DIAGNÓSTICOS -->
-         <div class="main_content__estudios " id="estudios_list">
+        <article class="main_content__inicio" id="inicio">
+
+        </article>
+        <!-- ESPECIALIDADES -->
+        <article class="main_content__especialidades" id="especialidades_list">
+          <h2 class="title">Especialidades</h2>
+          <ul class="especialidad">
+            <li class="especialidad__1">
+              <span class="icon-ok"></span> Alergia
+            </li>
+            <li class="especialidad__2">
+              <span class="icon-ok"></span> Alergia - Neumología
+            </li>
+            <li class="especialidad__3">
+              <span class="icon-ok"></span> Cardiología
+            </li>
+            <li class="especialidad__4">
+              <span class="icon-ok"></span> Clínica Médica
+            </li>
+            <li class="especialidad__5">
+              <span class="icon-ok"></span> Cirugía General
+            </li>
+            <li class="especialidad__6">
+              <span class="icon-ok"></span> Ecografía
+            </li>
+            <li class="especialidad__7">
+              <span class="icon-ok"></span> Dermatología
+            </li>
+            <li class="especialidad__8">
+              <span class="icon-ok"></span> Diabetología
+            </li>
+            <li class="especialidad__9">
+              <span class="icon-ok"></span> Ginecología
+            </li>
+            <li class="especialidad__10">
+              <span class="icon-ok"></span> Infectología
+            </li>
+            <li class="especialidad__11">
+              <span class="icon-ok"></span> Mastología
+            </li>
+            <li class="especialidad__12">
+              <span class="icon-ok"></span> Medicina Laboral
+            </li>
+            <li class="especialidad__13">
+              <span class="icon-ok"></span> Nutrición
+            </li>
+            <li class="especialidad__14">
+              <span class="icon-ok"></span> Otorrino
+            </li>
+            <li class="especialidad__15">
+              <span class="icon-ok"></span> Pediatría
+            </li>
+            <li class="especialidad__16">
+              <span class="icon-ok"></span> Psiquiatría
+            </li>
+            <li class="especialidad__17">
+              <span class="icon-ok"></span> Psicología
+            </li>
+            <li class="especialidad__18">
+              <span class="icon-ok"></span> Urología
+            </li>
+          </ul>
+        </article>
+        <!-- ESTUDIOS Y DIAGNÓSTICOS -->
+        <article class="main_content__estudios" id="estudios_list">
           <h2 class="title">Estudios - Diagnósticos</h2>
           <ul class="estudios">
-          <li class="estudios__1"> <span class=" icon-ok"></span>Ecografía Ginecológica</li>
-          <li class="estudios__2"> <span class=" icon-ok"></span>Ecografía Obstétrica</li>
-          <li class="estudios__3"> <span class=" icon-ok"></span>Ecografía Transvaginal</li>
-          <li class="estudios__4"> <span class=" icon-ok"></span>Ecografía Morfológica</li>
-          <li class="estudios__5"> <span class=" icon-ok"></span>Eco Doppler</li>
-          <li class="estudios__6"> <span class=" icon-ok"></span>Ecografía Doppler Materno Fetal</li>
-          <li class="estudios__7"> <span class=" icon-ok"></span>Eco Doppler Ginecológico</li>
-          <li class="estudios__8"> <span class=" icon-ok"></span>Ecografía Mamaria</li>
-          <li class="estudios__9"> <span class=" icon-ok"></span>Ecografía de Partes Blandas</li>
-          <li class="estudios__10"> <span class=" icon-ok"></span>Ecografía Tiroidea</li>
-          <li class="estudios__11"> <span class=" icon-ok"></span>Ecografía Renal</li>
-          <li class="estudios__12"> <span class=" icon-ok"></span>Ecografía Abdominal Alta y Baja</li>
-          <li class="estudios__13"> <span class=" icon-ok"></span>Ecografía Vesico Prostática</li>
-          <li class="estudios__14"> <span class=" icon-ok"></span>Ecografía Prostática</li>
-          <li class="estudios__15"> <span class=" icon-ok"></span>Ecografía Testicular</li>
-          <li class="estudios__16"> <span class=" icon-ok"></span>Estudio de Cuello Uterino</li>
-          <li class="estudios__17"> <span class=" icon-ok"></span>(PAP + COLPOSCOPÍA)</li>
-          <li class="estudios__18"> <span class=" icon-ok"></span>Electrocardiograma (E.C.G.)</li>
-          <li class="estudios__19"> <span class=" icon-ok"></span>Espirometría</li>
-          <li class="estudios__20"> <span class=" icon-ok"></span>Marcadores Cromosómicos</li>
-          <li class="estudios__21"> <span class=" icon-ok"></span>Monitoreo Fetal</li>
-          <li class="estudios__22"> <span class=" icon-ok"></span>Perfil Biofísico</li>
-        </ul>
-        </div>
-      <!-- Listado de profesionales -->
-      <div class="main_content__profesionales " id="profesionales_list">
-        <h2 class="title">Conozca nuestro plantel de profesionales</h2>
-        <div class="profesional_1">
-          <img src="img/female_doctor.svg" alt="" />
-          <div class="profesional_description">
-            <span class="icon-user-md">Dra. María Elena Gómez Fonseca</span>
-            <span class="icon-medkit">Ginecología - Obstetricia</span>
-            <span class="icon-id-card">Reg. N° 6213</span>          
-            <span class="icon-mobile-1">(0981) 960 096</span>            
+            <li class="estudios__1">
+              <span class="icon-ok"></span>Ecografía Ginecológica
+            </li>
+            <li class="estudios__2">
+              <span class="icon-ok"></span>Ecografía Obstétrica
+            </li>
+            <li class="estudios__3">
+              <span class="icon-ok"></span>Ecografía Transvaginal
+            </li>
+            <li class="estudios__4">
+              <span class="icon-ok"></span>Ecografía Morfológica
+            </li>
+            <li class="estudios__5">
+              <span class="icon-ok"></span>Eco Doppler
+            </li>
+            <li class="estudios__6">
+              <span class="icon-ok"></span>Ecografía Doppler Materno Fetal
+            </li>
+            <li class="estudios__7">
+              <span class="icon-ok"></span>Eco Doppler Ginecológico
+            </li>
+            <li class="estudios__8">
+              <span class="icon-ok"></span>Ecografía Mamaria
+            </li>
+            <li class="estudios__9">
+              <span class="icon-ok"></span>Ecografía de Partes Blandas
+            </li>
+            <li class="estudios__10">
+              <span class="icon-ok"></span>Ecografía Tiroidea
+            </li>
+            <li class="estudios__11">
+              <span class="icon-ok"></span>Ecografía Renal
+            </li>
+            <li class="estudios__12">
+              <span class="icon-ok"></span>Ecografía Abdominal Alta y Baja
+            </li>
+            <li class="estudios__13">
+              <span class="icon-ok"></span>Ecografía Vesico Prostática
+            </li>
+            <li class="estudios__14">
+              <span class="icon-ok"></span>Ecografía Prostática
+            </li>
+            <li class="estudios__15">
+              <span class="icon-ok"></span>Ecografía Testicular
+            </li>
+            <li class="estudios__16">
+              <span class="icon-ok"></span>Estudio de Cuello Uterino
+            </li>
+            <li class="estudios__17">
+              <span class="icon-ok"></span>(PAP + COLPOSCOPÍA)
+            </li>
+            <li class="estudios__18">
+              <span class="icon-ok"></span>Electrocardiograma (E.C.G.)
+            </li>
+            <li class="estudios__19">
+              <span class="icon-ok"></span>Espirometría
+            </li>
+            <li class="estudios__20">
+              <span class="icon-ok"></span>Marcadores Cromosómicos
+            </li>
+            <li class="estudios__21">
+              <span class="icon-ok"></span>Monitoreo Fetal
+            </li>
+            <li class="estudios__22">
+              <span class="icon-ok"></span>Perfil Biofísico
+            </li>
+          </ul>
+        </article>
+        <!-- Listado de profesionales -->
+        <article class="main_content__profesionales" id="profesionales_list">
+          <h2 class="title">Conozca nuestro plantel de profesionales</h2>
+          <div class="profesional_1">
+            <img src="img/female_doctor.svg" alt="" />
+            <div class="profesional_description">
+              <span class="icon-user-md">Dra. María Elena Gómez Fonseca</span>
+              <span class="icon-medkit">Ginecología - Obstetricia</span>
+              <span class="icon-id-card">Reg. N° 6213</span>
+              <span class="icon-mobile-1">(0981) 960 096</span>
+            </div>
           </div>
-        </div>
-        <div class="profesional_2">
-          <img src="img/male_doctor.svg" alt="" />
-          <div class="profesional_description">
-            <span class="icon-user-md">Nombre Apellido</span>
-            <span class="icon-medkit">Especialidad</span>
-            <span class="icon-id-card">Reg. N° 000</span>          
-            <span class="icon-mobile-1">(0000) 000 000</span>
+          <div class="profesional_2">
+            <img src="img/male_doctor.svg" alt="" />
+            <div class="profesional_description">
+              <span class="icon-user-md">Nombre Apellido</span>
+              <span class="icon-medkit">Especialidad</span>
+              <span class="icon-id-card">Reg. N° 000</span>
+              <span class="icon-mobile-1">(0000) 000 000</span>
+            </div>
           </div>
-        </div>
-        <div class="profesional_3">
-          <img src="img/female_doctor.svg" alt="" />
-          <div class="profesional_description">
-            <span class="icon-user-md">Nombre Apellido</span>
-            <span class="icon-medkit">Especialidad</span>
-            <span class="icon-id-card">Reg. N° 000</span>          
-            <span class="icon-mobile-1">(0000) 000 000</span>
+          <div class="profesional_3">
+            <img src="img/female_doctor.svg" alt="" />
+            <div class="profesional_description">
+              <span class="icon-user-md">Nombre Apellido</span>
+              <span class="icon-medkit">Especialidad</span>
+              <span class="icon-id-card">Reg. N° 000</span>
+              <span class="icon-mobile-1">(0000) 000 000</span>
+            </div>
           </div>
-        </div>
-        <div class="profesional_4">
-          <img src="img/male_doctor.svg" alt="" />
-          <div class="profesional_description">
-            <span class="icon-user-md">Nombre Apellido</span>
-            <span class="icon-medkit">Especialidad</span>
-            <span class="icon-id-card">Reg. N° 000</span>          
-            <span class="icon-mobile-1">(0000) 000 000</span>
+          <div class="profesional_4">
+            <img src="img/male_doctor.svg" alt="" />
+            <div class="profesional_description">
+              <span class="icon-user-md">Nombre Apellido</span>
+              <span class="icon-medkit">Especialidad</span>
+              <span class="icon-id-card">Reg. N° 000</span>
+              <span class="icon-mobile-1">(0000) 000 000</span>
+            </div>
           </div>
-        </div>
-        <div class="profesional_5">
-          <img src="img/female_doctor.svg" alt="" />
-          <div class="profesional_description">
-            <span class="icon-user-md">Nombre Apellido</span>
-            <span class="icon-medkit">Especialidad</span>
-            <span class="icon-id-card">Reg. N° 000</span>          
-            <span class="icon-mobile-1">(0000) 000 000</span>
+          <div class="profesional_5">
+            <img src="img/female_doctor.svg" alt="" />
+            <div class="profesional_description">
+              <span class="icon-user-md">Nombre Apellido</span>
+              <span class="icon-medkit">Especialidad</span>
+              <span class="icon-id-card">Reg. N° 000</span>
+              <span class="icon-mobile-1">(0000) 000 000</span>
+            </div>
           </div>
-        </div>
-        <div class="profesional_6">
-          <img src="img/male_doctor.svg" alt="" />
-          <div class="profesional_description">
-            <span class="icon-user-md">Nombre Apellido</span>
-            <span class="icon-medkit">Especialidad</span>
-            <span class="icon-id-card">Reg. N° 000</span>          
-            <span class="icon-mobile-1">(0000) 000 000</span>
+          <div class="profesional_6">
+            <img src="img/male_doctor.svg" alt="" />
+            <div class="profesional_description">
+              <span class="icon-user-md">Nombre Apellido</span>
+              <span class="icon-medkit">Especialidad</span>
+              <span class="icon-id-card">Reg. N° 000</span>
+              <span class="icon-mobile-1">(0000) 000 000</span>
+            </div>
           </div>
+        </article>
+        <!-- TURNOS -->
+        <article class="main_content__turnos" id="turnos">
+          <h2 class="title">Solicitar Turno</h2>
+          <div class="center">
+          <!-- <progress class="progress"></progress> -->
+          <form class="turnos_formulario">
+            <div>
+              <input class="input_hover" type="text" id="ci_txt" required />
+              <label for="ci_txt">C.I. N°</label>
+            </div>
+            <div>
+              <input class="input_hover" type="text" id="nombre_txt" required />
+              <label for="nombre_txt">Nombre</label>
+            </div>
+            <div>
+              <input class="input_hover" type="text" id="apellidos_txt" required />
+              <label for="apellidos_txt">Apellidos</label>
+            </div>
+            <div>
+              <input class="input_hover" type="email" id="email_txt" required />
+              <label for="email_txt">E-Mail</label>
+            </div>
+            <div>
+              <select id="sexo_sel" required>
+                <option value="F">Femenino</option>
+                <option value="M">Masculino</option>
+              </select>
+              <label for="sexo_sel">Sexo</label>
+            </div>
+            <div>
+              <label for="">Fecha Nacimiento</label>
+                <span class="inner_flex">
+                <input class="input_hover2" type="number" size="4" id="day_birth_txt"  placeholder="Día" required />
+                <input class="input_hover2" type="number" size="4" id="mes_birth_txt" placeholder="Mes"  required />
+                <input class="input_hover2" type="number" size="7" id="year_birth_txt" placeholder="Año"  required />
+                </span>
+            </div>
+            <div>
+              <input class="input_hover" type="text" id="cell_txt" required />
+              <label for="cell_txt">Celular</label>
+            </div>
+            <div>
+              <input class="input_hover" type="text" id="phone_txt" required/>
+              <label for="phone_txt">Línea Baja</label>
+            </div>
+            <div>
+              <input class="input_hover" type="text" id="address_txt" required />
+              <label for="address_txt">Dirección</label>
+            </div>
+            <div>
+              <input class="input_hover" type="text" id="city_txt" required/>
+              <label for="city_txt">Ciudad</label>
+            </div>
+            <button class="icon-right-open"></button>
+          </form>
         </div>
+        </article>
       </div>
-      <div class="main_content__turnos">
-      </div>
-      <div class="main_content__turnos" id="turnos_list">
-
-      </div>
-    </div>
-    <!-- END OF MAIN CONTENT -->
+      <!-- END OF MAIN CONTENT -->
       <aside class="sidebar animate__animated animate__slideInRight">
         <h2>SIDEBAR</h2>
-        
       </aside>
       <footer class="footer animate__animated animate__slideInRight">
         <h2 class="icon-phone">(021) 514 390</h2>
@@ -165,6 +307,6 @@
         <h2 class="icon-location">INCAS 3467, Asunción</h2>
       </footer>
     </div>
-    <script src="javascript.js"></script>       
+    <script src="javascript.js"></script>
   </body>
 </html>

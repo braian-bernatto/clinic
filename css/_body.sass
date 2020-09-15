@@ -1,3 +1,7 @@
+html
+    min-height: 100vh
+
+
 body
     min-height: 100vh
     background: rgb(255,255,255)
@@ -45,13 +49,14 @@ body
 .main_content
     grid-area: main
     min-width: 288px
-    min-height: 65vh
+    min-height: 70vh
     position: relative
     // +bordes
     // background: $color1
-
+    &__inicio
+        height: 100%
+    // ESPECIALIDADES Y ESTUDIOS-----------------------------------------------------------------------------------
     &__especialidades, &__estudios      
-        grid-area: main
         font-size: 1.25em
         display: grid
         grid-template-columns: 1fr
@@ -73,11 +78,12 @@ body
             display: flex
             letter-spacing: 1px    
             justify-content: center
+            align-items: center
+            
+            
             &:hover
-                background: $color2
                 cursor: pointer
             &:active
-                // box-shadow: inset 0 0px 25px rgba(0, 0, 0, 0.5)
                 background: $color3
 
             span
@@ -89,17 +95,17 @@ body
         letter-spacing: 2px
         font-size: 1.5625em
         background: $color1
-        box-shadow: inset 0 60px rgba(255,255,255,0.2), inset 0 -15px 30px rgba(0,0,0,0.4), 0 5px 10px rgba(0,0,0,0.5)
+        +shadow_light
         border-radius: 4px
         padding: 5px
         text-align: center
 
 
+    // ESTUDIOS-----------------------------------------------------------------------------------
     &__estudios
         display: none
-
+    // PROFESIONALES-----------------------------------------------------------------------------------
     &__profesionales
-        grid-area: main
         font-size: 0.9rem
         display: grid
         grid-gap: 20px
@@ -132,12 +138,106 @@ body
                 margin-top: 8px
                 margin-left: 0.9375em
                 +bordes
-                // background: $color1
-                // +shadow_light_tall
                 color: $color1
 
                 span
                     text-indent: -0.9375em
+    // TURNOS-----------------------------------------------------------------------------------
+    &__turnos
+        min-height: 70vh
+        display: grid
+        grid-template-columns: 1fr
+        grid-template-rows: 50px 1fr
+        .center
+            position: relative
+            min-height: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+
+        .turnos_formulario
+            width: 40%
+            height: 100%
+            color: $color1
+            display: flex
+            flex-flow: column nowrap
+            justify-content: center
+            // align-items: center
+            font-size: 0.8125rem
+            user-select: auto
+
+            div
+                position: relative
+                margin: 0.9375rem 0
+
+                label             
+                    position: absolute
+                    left: 5px
+                    top: -1.125rem
+            
+                    
+                input, select
+                    border: none
+                    font-size: 0.8125rem
+                    padding: 5px
+                    border-radius: 5px
+                    color: $color1
+                    width: 100%
+                    border-bottom: 1px solid $color2
+
+                    & ~ label
+                        left: 5px
+                        top: -1.125rem
+                        transition: 0.5s ease all
+                    
+                .input_hover ~ label
+                    top: 5px
+                    color: #666
+
+                .input_hover:focus ~ label, .input_hover:valid ~ label
+                    top: -1.125rem
+                    color: $color1
+
+                .inner_flex
+                    display: flex
+                    flex-flow: row nowrap
+                    flex: 1 0 50px
+                    justify-content: space-between
+
+                    input
+                        width: 100%
+                    // SELECCIONA TODOS LOS ELEMENTOS QUE VIENE DESPUES DEL PRIMERO
+                    .input_hover2:nth-child(1) ~ .input_hover2
+                       margin-left: 15px 
+                
+            button
+                +shadow_light
+                background: $color2
+                color: #eee
+                border: none
+                border-radius: 50px
+                // width: 150px
+                height: 30px
+                font-size: 20px
+                text-align: center
+
+                &:hover
+                    cursor: pointer
+                &:active
+                    background: $color3
+
+
+
+    
+                // .input_hover:invalid ~ label::before 
+                //     content: 'x '
+                //     color: red                  
+
+              
+        
+    &__especialidades, &__estudios
+
+        display: none
 
 .sidebar
     grid-area: sidebar
@@ -148,7 +248,7 @@ body
     font-size: 1.125em
     align-content: center
     +shadow
-    +shadow_light_tall
+    +shadow_light
     
 .footer
     grid-area: footer
@@ -156,7 +256,7 @@ body
     background: $color1
     font-size: 0.8375em
     +shadow
-    +shadow_light_tall
+    +shadow_light
 
     h2
         margin: 10px
@@ -178,6 +278,7 @@ body
                 font-size: 15px           
 
 @media screen and ( max-width: 768px )
+
     .contenedor
         grid-template-areas: 'header header header' 'nav nav nav' 'main main main' 'main main main' 'sidebar sidebar sidebar' 'footer footer footer'
 
@@ -199,7 +300,41 @@ body
                 font-size: 17px
 
         .estudios
-                font-size: 12px              
+            font-size: 12px    
+
+        .turnos_formulario
+            width: 70%
+        
+        .progress
+            position: absolute
+            top: -30px
+            left: -30px
+
+            svg
+                position: relative
+                width: 150px
+                height: 150px
+                z-index: 1000
+                transform: rotate(270deg)
+                top: 0
+
+                circle
+                    width: 100%
+                    height: 100%
+                    fill: none
+                    stroke: #aaa
+                    stroke-width: 10
+                    stroke-linecap: round
+                    transform: translate(5px, 5px)
+                    transform:scale(1.2, 1.2)
+                    
+                
+                circle:nth-child(2)
+                    stroke-dasharray: 320 
+                    stroke-dashoffset: 320
+                    stroke-dashoffset: progress(320, 70)
+                    stroke: $color2
+
 
 // .main_content
 //     &__especialidades, &__profesionales, &__estudios
