@@ -241,9 +241,38 @@
         <!-- TURNOS -->
         <article class="main_content__turnos" id="turnos">
           <h2 class="title">Solicitar Turno</h2>
+          <div class="progress_bar">
+            <div class="step">
+              <p>Datos</p>
+              <div class="bullet">
+                <span>1</span>
+              </div>
+              <i class="icon-ok"></i>
+            </div>
+            <div class="step">
+              <p>Especialidad</p>
+              <div class="bullet">
+                <span>2</span>
+              </div>
+              <i class="icon-ok"></i>
+            </div>
+            <div class="step">
+              <p>Confirmar</p>
+              <div class="bullet">
+                <span>3</span>
+              </div>
+              <i class="icon-ok"></i>
+            </div>
+            <div class="step">
+              <p>Listo!</p>
+              <div class="bullet">
+                <span>4</span>
+              </div>
+              <i class="icon-ok"></i>
+            </div>
+          </div>
           <div class="center">
-          <!-- <progress class="progress"></progress> -->
-          <form class="turnos_formulario">
+          <form class="turnos_formulario" id="turnos_formulario">
             <div>
               <input class="input_hover" type="text" id="ci_txt" required />
               <label for="ci_txt">C.I. N°</label>
@@ -291,8 +320,185 @@
               <input class="input_hover" type="text" id="city_txt" required/>
               <label for="city_txt">Ciudad</label>
             </div>
-            <button class="icon-right-open"></button>
+            <button class="icon-right-open" id="form1_next" onclick="t_formulario2()"></button>
           </form>
+          <form class="turnos_formulario2" id="turnos_formulario2">
+            <div>
+              <select id="especialidad_sel" required>
+                  <option class="especialidad__1">
+                    <span class="icon-ok"></span> Alergia
+                  </option>
+                  <option class="especialidad__2">
+                    <span class="icon-ok"></span> Alergia - Neumología
+                  </option>
+                  <option class="especialidad__3">
+                    <span class="icon-ok"></span> Cardiología
+                  </option>
+                  <option class="especialidad__4">
+                    <span class="icon-ok"></span> Clínica Médica
+                  </option>
+                  <option class="especialidad__5">
+                    <span class="icon-ok"></span> Cirugía General
+                  </option>
+                  <option class="especialidad__6">
+                    <span class="icon-ok"></span> Ecografía
+                  </option>
+                  <option class="especialidad__7">
+                    <span class="icon-ok"></span> Dermatología
+                  </option>
+                  <option class="especialidad__8">
+                    <span class="icon-ok"></span> Diabetología
+                  </option>
+                  <option class="especialidad__9">
+                    <span class="icon-ok"></span> Ginecología
+                  </option>
+                  <option class="especialidad__10">
+                    <span class="icon-ok"></span> Infectología
+                  </option>
+                  <option class="especialidad__11">
+                    <span class="icon-ok"></span> Mastología
+                  </option>
+                  <option class="especialidad__12">
+                    <span class="icon-ok"></span> Medicina Laboral
+                  </option>
+                  <option class="especialidad__13">
+                    <span class="icon-ok"></span> Nutrición
+                  </option>
+                  <option class="especialidad__14">
+                    <span class="icon-ok"></span> Otorrino
+                  </option>
+                  <option class="especialidad__15">
+                    <span class="icon-ok"></span> Pediatría
+                  </option>
+                  <option class="especialidad__16">
+                    <span class="icon-ok"></span> Psiquiatría
+                  </option>
+                  <option class="especialidad__17">
+                    <span class="icon-ok"></span> Psicología
+                  </option>
+                  <option class="especialidad__18">
+                    <span class="icon-ok"></span> Urología
+                  </option>            
+              </select>
+              <label for="especialidad_sel">Especialidad</label>
+            </div>
+            <div>
+              <select id="doctor_sel" required>
+                  <option class="doctor_sel1">
+                    <span ></span> Maria Elena Fonsea
+                  </option>
+                  <option class="doctor_sel2">
+                    <span ></span> Nombre y Apellido
+                  </option>
+                  <option class="doctor_sel3">
+                    <span ></span> Nombre y Apellido
+                  </option>
+                  <option class="doctor_sel4">
+                    <span ></span> Nombre y Apellido
+                  </option>
+                  <option class="doctor_sel5">
+                    <span ></span> Nombre y Apellido
+                  </option>
+                  <option class="doctor_sel6">
+                    <span></span> Nombre y Apellido
+                  </option>
+              </select>
+              <label for="doctor_sel">Doctor</label>
+            </div>
+            <div>
+              <input class="input_hover" type="text" id="cell_txt" required />
+              <label for="cell_txt">Celular</label>
+            </div>
+            <button class="icon-book-alt btn_available"> Ver disponibilidad</button>
+            
+            <div class="botones_group">
+            <button class="icon-left-open" id="form2_back" onclick="t_formulario1()"></button>
+            <button class="icon-right-open" id="form2_next" onclick="t_formulario3()"></button>
+           </div>
+          </form>
+          <form class="turnos_formulario3" id="turnos_formulario3">
+            <div>
+              <input class="input_hover" type="text" id="apellidos_txt" required />
+              <label for="apellidos_txt">Apellidos</label>
+            </div>
+            <div>
+              <input class="input_hover" type="email" id="email_txt" required />
+              <label for="email_txt">E-Mail</label>
+            </div>
+            <div>
+              <select id="sexo_sel" required>
+                <option value="F">Femenino</option>
+                <option value="M">Masculino</option>
+              </select>
+              <label for="sexo_sel">Sexo</label>
+            </div>
+            <div>
+              <label for="">Fecha Nacimiento</label>
+                <span class="inner_flex">
+                <input class="input_hover2" type="number" size="4" id="day_birth_txt"  placeholder="Día" required />
+                <input class="input_hover2" type="number" size="4" id="mes_birth_txt" placeholder="Mes"  required />
+                <input class="input_hover2" type="number" size="7" id="year_birth_txt" placeholder="Año"  required />
+                </span>
+            </div>
+            <div>
+              <input class="input_hover" type="text" id="cell_txt" required />
+              <label for="cell_txt">Celular</label>
+            </div>
+            <div>
+              <input class="input_hover" type="text" id="phone_txt" required/>
+              <label for="phone_txt">Línea Baja</label>
+            </div>
+            <div>
+              <input class="input_hover" type="text" id="address_txt" required />
+              <label for="address_txt">Dirección</label>
+            </div>
+            <div>
+              <input class="input_hover" type="text" id="city_txt" required/>
+              <label for="city_txt">Ciudad</label>
+            </div>
+            <div class="botones_group">
+              <button class="icon-left-open" id="form2_back" onclick="t_formulario2()"></button>
+              <button class="icon-right-open" id="form2_next" onclick="t_formulario4()"></button>
+             </div>
+          </form>
+          <form class="turnos_formulario4" id="turnos_formulario4">
+            <div>
+              <select id="sexo_sel" required>
+                <option value="F">Femenino</option>
+                <option value="M">Masculino</option>
+              </select>
+              <label for="sexo_sel">Sexo</label>
+            </div>
+            <div>
+              <label for="">Fecha Nacimiento</label>
+                <span class="inner_flex">
+                <input class="input_hover2" type="number" size="4" id="day_birth_txt"  placeholder="Día" required />
+                <input class="input_hover2" type="number" size="4" id="mes_birth_txt" placeholder="Mes"  required />
+                <input class="input_hover2" type="number" size="7" id="year_birth_txt" placeholder="Año"  required />
+                </span>
+            </div>
+            <div>
+              <input class="input_hover" type="text" id="cell_txt" required />
+              <label for="cell_txt">Celular</label>
+            </div>
+            <div>
+              <input class="input_hover" type="text" id="phone_txt" required/>
+              <label for="phone_txt">Línea Baja</label>
+            </div>
+            <div>
+              <input class="input_hover" type="text" id="address_txt" required />
+              <label for="address_txt">Dirección</label>
+            </div>
+            <div>
+              <input class="input_hover" type="text" id="city_txt" required/>
+              <label for="city_txt">Ciudad</label>
+            </div>
+            <div class="botones_group">
+              <button class="icon-left-open" id="form2_back" onclick="t_formulario3()"></button>
+              <button class="icon-right-open" id="form2_next" onclick="t_formulario4()"></button>
+             </div>
+          </form>
+
         </div>
         </article>
       </div>

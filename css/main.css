@@ -291,8 +291,8 @@ body {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 50px 1fr;
-      grid-template-rows: 50px 1fr;
+  -ms-grid-rows: 40px 80px 1fr;
+      grid-template-rows: 40px 80px 1fr;
 }
 
 .main_content__turnos .center {
@@ -309,7 +309,116 @@ body {
           align-items: center;
 }
 
-.main_content__turnos .turnos_formulario {
+.main_content__turnos .progress_bar {
+  color: #003459;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0;
+}
+
+.main_content__turnos .progress_bar .step {
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+.main_content__turnos .progress_bar .step p {
+  letter-spacing: 1px;
+  font-size: 0.875rem;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.main_content__turnos .progress_bar .step p.active {
+  color: #3dccc7;
+}
+
+.main_content__turnos .progress_bar .step:last-child .bullet::before,
+.main_content__turnos .progress_bar .step:last-child .bullet::after {
+  display: none;
+}
+
+.main_content__turnos .progress_bar .bullet {
+  position: relative;
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  border: 2px solid #003459;
+  border-radius: 50%;
+  line-height: 22px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.main_content__turnos .progress_bar .bullet.active {
+  border-color: #3dccc7;
+  background: #3dccc7;
+}
+
+.main_content__turnos .progress_bar .bullet::before, .main_content__turnos .progress_bar .bullet::after {
+  position: absolute;
+  content: '';
+  bottom: 8px;
+  left: 30px;
+  height: 3px;
+  width: 145px;
+  background: #003459;
+}
+
+.main_content__turnos .progress_bar .bullet.active::after {
+  background: #3dccc7;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-animation: animate .3s linear forwards;
+          animation: animate .3s linear forwards;
+}
+
+@-webkit-keyframes animate {
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes animate {
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+.main_content__turnos .progress_bar .bullet span {
+  font-size: 17px;
+  line-height: 22px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.main_content__turnos .progress_bar .bullet.active span {
+  display: none;
+}
+
+.main_content__turnos .progress_bar i {
+  font-size: 17px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: none;
+}
+
+.main_content__turnos .progress_bar i.active {
+  display: block;
+  color: #fff;
+}
+
+.main_content__turnos .turnos_formulario, .main_content__turnos .turnos_formulario2, .main_content__turnos .turnos_formulario3, .main_content__turnos .turnos_formulario4 {
   width: 40%;
   height: 100%;
   color: #003459;
@@ -330,18 +439,18 @@ body {
           user-select: auto;
 }
 
-.main_content__turnos .turnos_formulario div {
+.main_content__turnos .turnos_formulario div, .main_content__turnos .turnos_formulario2 div, .main_content__turnos .turnos_formulario3 div, .main_content__turnos .turnos_formulario4 div {
   position: relative;
   margin: 0.9375rem 0;
 }
 
-.main_content__turnos .turnos_formulario div label {
+.main_content__turnos .turnos_formulario div label, .main_content__turnos .turnos_formulario2 div label, .main_content__turnos .turnos_formulario3 div label, .main_content__turnos .turnos_formulario4 div label {
   position: absolute;
   left: 5px;
   top: -1.125rem;
 }
 
-.main_content__turnos .turnos_formulario div input, .main_content__turnos .turnos_formulario div select {
+.main_content__turnos .turnos_formulario div input, .main_content__turnos .turnos_formulario div select, .main_content__turnos .turnos_formulario2 div input, .main_content__turnos .turnos_formulario2 div select, .main_content__turnos .turnos_formulario3 div input, .main_content__turnos .turnos_formulario3 div select, .main_content__turnos .turnos_formulario4 div input, .main_content__turnos .turnos_formulario4 div select {
   border: none;
   font-size: 0.8125rem;
   padding: 5px;
@@ -351,24 +460,24 @@ body {
   border-bottom: 1px solid #3dccc7;
 }
 
-.main_content__turnos .turnos_formulario div input ~ label, .main_content__turnos .turnos_formulario div select ~ label {
+.main_content__turnos .turnos_formulario div input ~ label, .main_content__turnos .turnos_formulario div select ~ label, .main_content__turnos .turnos_formulario2 div input ~ label, .main_content__turnos .turnos_formulario2 div select ~ label, .main_content__turnos .turnos_formulario3 div input ~ label, .main_content__turnos .turnos_formulario3 div select ~ label, .main_content__turnos .turnos_formulario4 div input ~ label, .main_content__turnos .turnos_formulario4 div select ~ label {
   left: 5px;
   top: -1.125rem;
   -webkit-transition: 0.5s ease all;
   transition: 0.5s ease all;
 }
 
-.main_content__turnos .turnos_formulario div .input_hover ~ label {
+.main_content__turnos .turnos_formulario div .input_hover ~ label, .main_content__turnos .turnos_formulario2 div .input_hover ~ label, .main_content__turnos .turnos_formulario3 div .input_hover ~ label, .main_content__turnos .turnos_formulario4 div .input_hover ~ label {
   top: 5px;
   color: #666;
 }
 
-.main_content__turnos .turnos_formulario div .input_hover:focus ~ label, .main_content__turnos .turnos_formulario div .input_hover:valid ~ label {
+.main_content__turnos .turnos_formulario div .input_hover:focus ~ label, .main_content__turnos .turnos_formulario div .input_hover:valid ~ label, .main_content__turnos .turnos_formulario2 div .input_hover:focus ~ label, .main_content__turnos .turnos_formulario2 div .input_hover:valid ~ label, .main_content__turnos .turnos_formulario3 div .input_hover:focus ~ label, .main_content__turnos .turnos_formulario3 div .input_hover:valid ~ label, .main_content__turnos .turnos_formulario4 div .input_hover:focus ~ label, .main_content__turnos .turnos_formulario4 div .input_hover:valid ~ label {
   top: -1.125rem;
   color: #003459;
 }
 
-.main_content__turnos .turnos_formulario div .inner_flex {
+.main_content__turnos .turnos_formulario div .inner_flex, .main_content__turnos .turnos_formulario2 div .inner_flex, .main_content__turnos .turnos_formulario3 div .inner_flex, .main_content__turnos .turnos_formulario4 div .inner_flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -384,15 +493,37 @@ body {
           justify-content: space-between;
 }
 
-.main_content__turnos .turnos_formulario div .inner_flex input {
+.main_content__turnos .turnos_formulario div .inner_flex input, .main_content__turnos .turnos_formulario2 div .inner_flex input, .main_content__turnos .turnos_formulario3 div .inner_flex input, .main_content__turnos .turnos_formulario4 div .inner_flex input {
   width: 100%;
 }
 
-.main_content__turnos .turnos_formulario div .inner_flex .input_hover2:nth-child(1) ~ .input_hover2 {
+.main_content__turnos .turnos_formulario div .inner_flex .input_hover2:nth-child(1) ~ .input_hover2, .main_content__turnos .turnos_formulario2 div .inner_flex .input_hover2:nth-child(1) ~ .input_hover2, .main_content__turnos .turnos_formulario3 div .inner_flex .input_hover2:nth-child(1) ~ .input_hover2, .main_content__turnos .turnos_formulario4 div .inner_flex .input_hover2:nth-child(1) ~ .input_hover2 {
   margin-left: 15px;
 }
 
-.main_content__turnos .turnos_formulario button {
+.main_content__turnos .turnos_formulario .botones_group, .main_content__turnos .turnos_formulario2 .botones_group, .main_content__turnos .turnos_formulario3 .botones_group, .main_content__turnos .turnos_formulario4 .botones_group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main_content__turnos .turnos_formulario .botones_group button, .main_content__turnos .turnos_formulario2 .botones_group button, .main_content__turnos .turnos_formulario3 .botones_group button, .main_content__turnos .turnos_formulario4 .botones_group button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.main_content__turnos .turnos_formulario .botones_group button:first-child, .main_content__turnos .turnos_formulario2 .botones_group button:first-child, .main_content__turnos .turnos_formulario3 .botones_group button:first-child, .main_content__turnos .turnos_formulario4 .botones_group button:first-child {
+  margin-right: 10px;
+}
+
+.main_content__turnos .turnos_formulario button, .main_content__turnos .turnos_formulario2 button, .main_content__turnos .turnos_formulario3 button, .main_content__turnos .turnos_formulario4 button {
   -webkit-box-shadow: inset 0 9999px rgba(255, 255, 255, 0.2), inset 0 -15px 30px rgba(0, 0, 0, 0.4), 0 5px 10px rgba(0, 0, 0, 0.5);
           box-shadow: inset 0 9999px rgba(255, 255, 255, 0.2), inset 0 -15px 30px rgba(0, 0, 0, 0.4), 0 5px 10px rgba(0, 0, 0, 0.5);
   background: #3dccc7;
@@ -404,12 +535,16 @@ body {
   text-align: center;
 }
 
-.main_content__turnos .turnos_formulario button:hover {
+.main_content__turnos .turnos_formulario button:hover, .main_content__turnos .turnos_formulario2 button:hover, .main_content__turnos .turnos_formulario3 button:hover, .main_content__turnos .turnos_formulario4 button:hover {
   cursor: pointer;
 }
 
-.main_content__turnos .turnos_formulario button:active {
+.main_content__turnos .turnos_formulario button:active, .main_content__turnos .turnos_formulario2 button:active, .main_content__turnos .turnos_formulario3 button:active, .main_content__turnos .turnos_formulario4 button:active {
   background: #02f8f0;
+}
+
+.main_content__turnos .turnos_formulario2, .main_content__turnos .turnos_formulario3, .main_content__turnos .turnos_formulario4 {
+  display: none;
 }
 
 .main_content__especialidades, .main_content__estudios {
@@ -502,37 +637,7 @@ body {
   .main_content .estudios {
     font-size: 12px;
   }
-  .main_content .turnos_formulario {
+  .main_content .turnos_formulario, .main_content .turnos_formulario2 {
     width: 70%;
-  }
-  .main_content .progress {
-    position: absolute;
-    top: -30px;
-    left: -30px;
-  }
-  .main_content .progress svg {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    z-index: 1000;
-    -webkit-transform: rotate(270deg);
-            transform: rotate(270deg);
-    top: 0;
-  }
-  .main_content .progress svg circle {
-    width: 100%;
-    height: 100%;
-    fill: none;
-    stroke: #aaa;
-    stroke-width: 10;
-    stroke-linecap: round;
-    -webkit-transform: translate(5px, 5px);
-            transform: translate(5px, 5px);
-  }
-  .main_content .progress svg circle:nth-child(2) {
-    stroke-dasharray: 320;
-    stroke-dashoffset: 320;
-    stroke-dashoffset: 96;
-    stroke: #3dccc7;
   }
 }
