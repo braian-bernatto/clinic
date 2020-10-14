@@ -64,7 +64,6 @@ html {
 
 body {
   min-height: 100vh;
-  background: white;
   background: linear-gradient(174deg, white 0%, #dadada 100%, #b0b0b0 100%);
   font-size: 13px;
 }
@@ -320,12 +319,13 @@ body {
 .main_content__turnos .progress_bar .step {
   text-align: center;
   width: 100%;
+  height: auto;
   position: relative;
 }
 
 .main_content__turnos .progress_bar .step p {
   letter-spacing: 1px;
-  font-size: 0.875rem;
+  font-size: 0.8125em;
   -webkit-transition: .2s;
   transition: .2s;
 }
@@ -334,39 +334,22 @@ body {
   color: #3dccc7;
 }
 
-.main_content__turnos .progress_bar .step:last-child .bullet::before,
-.main_content__turnos .progress_bar .step:last-child .bullet::after {
+.main_content__turnos .progress_bar .step:last-child::before, .main_content__turnos .progress_bar .step:last-child::after {
   display: none;
 }
 
-.main_content__turnos .progress_bar .bullet {
-  position: relative;
-  display: inline-block;
-  height: 25px;
-  width: 25px;
-  border: 2px solid #003459;
-  border-radius: 50%;
-  line-height: 22px;
-  -webkit-transition: .2s;
-  transition: .2s;
-}
-
-.main_content__turnos .progress_bar .bullet.active {
-  border-color: #3dccc7;
-  background: #3dccc7;
-}
-
-.main_content__turnos .progress_bar .bullet::before, .main_content__turnos .progress_bar .bullet::after {
+.main_content__turnos .progress_bar .step::before, .main_content__turnos .progress_bar .step::after {
   position: absolute;
   content: '';
-  bottom: 8px;
-  left: 30px;
+  bottom: 2rem;
+  left: 50%;
   height: 3px;
-  width: 12.0625em;
+  width: 100%;
   background: #003459;
+  z-index: -1;
 }
 
-.main_content__turnos .progress_bar .bullet.active::after {
+.main_content__turnos .progress_bar .step.active::after {
   background: #3dccc7;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
@@ -390,14 +373,37 @@ body {
   }
 }
 
+.main_content__turnos .progress_bar .bullet {
+  position: relative;
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  border: 1px solid #003459;
+  border-radius: 50%;
+  background: linear-gradient(174deg, white 0%, #dadada 100%, #b0b0b0 100%);
+}
+
+.main_content__turnos .progress_bar .bullet.active {
+  border-color: #3dccc7;
+  background: #3dccc7;
+}
+
 .main_content__turnos .progress_bar .bullet span {
-  font-size: 17px;
-  line-height: 22px;
   position: absolute;
-  left: 50%;
-  top: -2px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  top: -1px;
+  left: -1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 17px;
+  width: 25px;
+  line-height: 25px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .main_content__turnos .progress_bar .bullet.active span {
@@ -405,10 +411,11 @@ body {
 }
 
 .main_content__turnos .progress_bar i {
-  font-size: 17px;
   position: absolute;
+  font-size: 17px;
+  line-height: 25px;
   left: 50%;
-  top: 50%;
+  top: 43%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   display: none;
@@ -640,5 +647,15 @@ body {
   }
   .main_content .turnos_formulario, .main_content .turnos_formulario2 {
     width: 70%;
+  }
+  .main_content .step i {
+    top: 23px;
+  }
+  .main_content .step::before, .main_content .step::after {
+    top: 22px;
+  }
+  .main_content .step .bullet span {
+    left: -1px;
+    top: -1px;
   }
 }

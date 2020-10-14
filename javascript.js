@@ -67,6 +67,7 @@ function t_formulario2() {
     bullet[current - 1].classList.add("active");
     progressCheck[current - 1].classList.add("active");
     progressText[current - 1].classList.add("active");
+    divprog[current - 1].classList.add("active");
     current += 1;
 }
 
@@ -80,6 +81,7 @@ function t_formulario3() {
     bullet[current - 1].classList.add("active");
     progressCheck[current - 1].classList.add("active");
     progressText[current - 1].classList.add("active");
+    divprog[current - 1].classList.add("active");
     current += 1;
 }
 
@@ -93,12 +95,14 @@ function t_formulario4() {
     bullet[current - 1].classList.add("active");
     progressCheck[current - 1].classList.add("active");
     progressText[current - 1].classList.add("active");
+    divprog[current - 1].classList.add("active");
     current += 1;
 }
 
 const progressText = document.querySelectorAll(".step p");
 const bullet = document.querySelectorAll(".step .bullet");
 const progressCheck = document.querySelectorAll(".step i");
+const divprog = document.querySelectorAll(".step");
 let max = 4;
 let current = 1;
 
